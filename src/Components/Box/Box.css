@@ -1,0 +1,40 @@
+.boxBody {
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+}
+
+.boxImage {
+    width: 90%;
+    object-fit: contain;
+}
+
+.boxButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boxButton {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #FF9A00;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .boxBody {
+        width: 100%;
+        height: 20%;
+        margin: 0;
+        margin-bottom: 3vh;
+    }
+}

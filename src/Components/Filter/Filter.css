@@ -1,0 +1,53 @@
+#filterImg {
+    width: 30px;
+}
+
+#filterMain {
+    width: 2%;
+    position: relative;
+}
+
+#filterBody {
+    position: absolute;
+    right: -5vw;
+    background-color: white;
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filterItem {
+    display: flex;
+    width: 100%;
+    font-size: medium;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.inputFilter {
+    width: 30px;
+}
+
+#filterButton {
+    width: 30%;
+}
+
+.inputFilterPrice {
+    width: 20%;
+}
+
+#filterButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:768px) {
+    #filterBody {
+        right: -15vw;
+        width: 100vw;
+    }
+}

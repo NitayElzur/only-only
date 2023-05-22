@@ -1,0 +1,26 @@
+#errorMain {
+    position: relative;
+    top: 15vh;
+    font-size: xx-large;
+    text-align: center;
+    background-color: var(--grey);
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#errorDiv {
+    background-color: white;
+    padding: 10%;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    #errorMain {
+        top: 5vh;
+        width: 100vw;
+        height: 55vh;
+    }
+}

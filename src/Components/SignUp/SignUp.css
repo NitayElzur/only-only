@@ -1,0 +1,59 @@
+#signUpMain {
+    position: relative;
+    top: 15vh;
+    height: 85vh;
+    background-color: var(--grey);
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.formInput {
+    height: 5vh;
+    width: 30vw;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    margin-bottom: 3vh;
+}
+
+.errorText {
+    color: red;
+    font-size: small;
+}
+
+#formButton {
+    width: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+    #signUpMain {
+        width: 100vw;
+        top: 5vh;
+        height: 50%;
+    }
+
+    #signUpForm {
+        width: 90%;
+        height: 40%;
+        padding: 3vh;
+    }
+
+    .formInput {
+        height: 5vh;
+        width: 50vw;
+    }
+}
