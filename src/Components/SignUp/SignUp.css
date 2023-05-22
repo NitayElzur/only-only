@@ -43,17 +43,23 @@
     #signUpMain {
         width: 100vw;
         top: 5vh;
-        height: 50%;
+        height: 70vh;
     }
 
     #signUpForm {
         width: 90%;
-        height: 40%;
+        height: 100%;
         padding: 3vh;
+        justify-content: space-evenly;
     }
 
     .formInput {
         height: 5vh;
-        width: 50vw;
+        width: 70vw;
+    }
+
+    #formButton {
+        width: 65vw;
+        height: 5vh;
     }
 }

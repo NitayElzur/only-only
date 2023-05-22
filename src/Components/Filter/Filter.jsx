@@ -46,7 +46,6 @@ function Filter({ data, setFilterData }) {
                     <button id='filterButton' className='boxButton' onClick={() => {
                         setFilterData(data.filter(value => value.price >= inputValues.minPrice && value.price <= inputValues.maxPrice && value.bedrooms >= inputValues.minBedroom && value.bedrooms <= inputValues.maxBedroom && value.bathrooms >= inputValues.minBathrooms && value.bathrooms <= inputValues.maxBathrooms))
                     }}>Filter</button>
-                    <button id='filterButton' className='boxButton' onClick={() => setFilterData(data)}>Reset</button>
                 </div>
             </div>
         </div>

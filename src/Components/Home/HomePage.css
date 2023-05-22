@@ -74,6 +74,9 @@
     #homeThinkText {
         text-align: center;
         margin: 0;
+        height: 40vh;
+        line-height: 8vw;
+        padding: 4vw;
     }
 
     #thinkImg {

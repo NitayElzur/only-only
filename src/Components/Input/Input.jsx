@@ -1,7 +1,8 @@
 import './Input.css'
-function Input({ name, minLength, maxLength, register, errors, pat, patMsg, type}) {
+function Input({ name, minLength, maxLength, register, errors, pat, patMsg, type }) {
     return (
         <div>
+            {errors[name] && <div className='errorText'>{errors[name]?.message}</div>}
             <input id={`${name.toLowerCase()}Input`} className='formInput' type={`${type}`} placeholder={`${name}`} {
                 ...register(`${name}`, {
                     required: `${name} is required`,
@@ -19,7 +20,6 @@ function Input({ name, minLength, maxLength, register, errors, pat, patMsg, type
                     }
                 })
             } />
-            {errors[name] && <div className='errorText'>{errors[name]?.message}</div>}
         </div>
     )
 }

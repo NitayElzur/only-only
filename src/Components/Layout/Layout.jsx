@@ -20,19 +20,21 @@ function Layout() {
             </div>
             <Outlet />
             <div id="footer">
-                <div id="footerFirstRow">
-                    <div className="footerItem">About</div>
-                    <div className="footerItem">Research</div>
-                    <div className="footerItem">Careers</div>
-                    <div className="footerItem">Help</div>
-                </div>
-                <div id="footerSecondRow">
+                <div id="footerTopRow">
+                    <div id="footerFirstRow">
+                        <div className="footerItem">About</div>
+                        <div className="footerItem">Research</div>
+                        <div className="footerItem">Careers</div>
+                        <div className="footerItem">Help</div>
+                    </div>
+                    <div id="footerSecondRow">
 
-                    <div className="footerItem">Advertise</div>
-                    <div className="footerItem">Terms of use</div>
-                    <div className="footerItem">Privacy policy</div>
-                    <div className="footerItem">Cookie preference</div>
-                    <div className="footerItem">Blog</div>
+                        <div className="footerItem">Advertise</div>
+                        <div className="footerItem">Terms of use</div>
+                        <div className="footerItem">Privacy policy</div>
+                        <div className="footerItem">Cookie preference</div>
+                        <div className="footerItem">Blog</div>
+                    </div>
                 </div>
                 <div id="footerBottomRow">
                     <img id='footerImg' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4UlEQVR4nM2XTS9DQRSGH02rtirx1WApNndj5yMWGjt+gtTCx16IP6AWquI/+Er8B2IrWKEaCd2RlD02ZJI3cnHdO/eaRd9kNmdm7tM558ycU2hidQMeMGw5PO1JpA5gA6gDHwnHA1ACcrbQKeAFOANmgT4gHeNHp7XH7D0HnoGCDfQVWAZa+L/MN1b0zUKYe18Eda1VnTzQ7Rtyr4uTDgEzvm+1ABeK+S/VFRcXelKCTftsRSXcN3VpoUmKKOWBRaCisSibX0fAIzDosw2I0elf6MkYlr1ZYAd4B66BXY0b2ba15i9lxDCsLw3L+JfagFOgCowEzI8BNeAkAv4hljV4R9D2kDU5wSuuwHm5cpRojQNvQK8L8BJwhb1MzBdcgCvAXgzwAVB2Ad4C9mOAD4FNV66+jgGuunJ1XsllrkyUJpRcPS7A6HGoRdRWU2TuQuKbCJzV41DTlQk6qYEeA61xwJ7lk1mRK6tKODNuZStHQDNBT2acImEeh3lfkZgPiSlRRQKVLFdlMUhF4D5ooqQeyUUj8FMp4BJYD5rMqT0xPZJrrQGNsCJTUGO26ujkKUFfgcmoxQWd/EJx6VdG2iqjRJqTexs2UL/bS0q4pA39vWIaVsMJk7lqcf/CmD3NqU96K5pD3a+ChQAAAABJRU5ErkJggg==" />

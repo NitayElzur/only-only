@@ -17,17 +17,17 @@ function Body() {
 
     useEffect(() => {
         switch (sort) {
-            case ('priceLowHigh'): setFilterData(data1.toSorted((a, b) => a.price - b.price))
+            case ('priceLowHigh'): setFilterData(filterData.toSorted((a, b) => a.price - b.price))
                 break;
-            case ('priceHighLow'): setFilterData(data1.toSorted((a, b) => b.price - a.price))
+            case ('priceHighLow'): setFilterData(filterData.toSorted((a, b) => b.price - a.price))
                 break;
-            case ('bathLowHigh'): setFilterData(data1.toSorted((a, b) => a.bathrooms - b.bathrooms))
+            case ('bathLowHigh'): setFilterData(filterData.toSorted((a, b) => a.bathrooms - b.bathrooms))
                 break;
-            case ('bathHighLow'): setFilterData(data1.toSorted((a, b) => b.bathrooms - a.bathrooms))
+            case ('bathHighLow'): setFilterData(filterData.toSorted((a, b) => b.bathrooms - a.bathrooms))
                 break;
-            case ('bedLowHigh'): setFilterData(data1.toSorted((a, b) => a.bedrooms - b.bedrooms))
+            case ('bedLowHigh'): setFilterData(filterData.toSorted((a, b) => a.bedrooms - b.bedrooms))
                 break;
-            case ('bedHighLow'): setFilterData(data1.toSorted((a, b) => b.bedrooms - a.bedrooms))
+            case ('bedHighLow'): setFilterData(filterData.toSorted((a, b) => b.bedrooms - a.bedrooms))
                 break;
         }
     }, [sort])

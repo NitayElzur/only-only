@@ -50,4 +50,20 @@
         right: -15vw;
         width: 100vw;
     }
+
+    #filterMain {
+        position: static;
+    }
+
+    #filterBody {
+        right: 0;
+    }
+
+    #filterImg {
+        width:  25px;
+    }
+
+    #bodySearch::placeholder {
+        font-size: initial;
+    }
 }

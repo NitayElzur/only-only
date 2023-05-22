@@ -34,3 +34,22 @@
     width: 80%;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    #productMain {
+        width: 100vw;
+        top: 5vh;
+    }
+
+    #productDivBack {
+        width: 95%;
+        flex-direction: column;
+        padding: 2vh 0;
+        line-height: 3vh;
+    }
+
+    #productImgDiv {
+        margin: 0;
+        width: 90%;
+    }
+}
