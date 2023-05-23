@@ -20,7 +20,7 @@ function Box({ result, favorites, setFavorites }) {
     })
     return (
         <div className='boxBody' >
-            <Link className='link linkBox' to={result.zpid.toString()}>
+            <Link className='link linkBox' to={`/listings/${result.zpid.toString()}`}>
                 <img className='boxImage' src={result.imgSrc} alt="" />
                 <div className="boxInfo">
                     {`${result?.streetAddress}, ${result?.city}, ${result?.state}`} <br />
