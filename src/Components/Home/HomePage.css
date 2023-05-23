@@ -35,7 +35,7 @@
 #homeBigText {
     top: 10%;
     position: absolute;
-    align-self: center;
+    text-align: center;
 }
 
 #thinkImg {

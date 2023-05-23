@@ -1,4 +1,7 @@
 import './Box.css'
+import Heart from '../Heart/Heart';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 function commafy(num) {
     const str = num?.toString().split('.');
     if (str[0].length >= 2) {
@@ -12,17 +15,19 @@ function commafy(num) {
 function Box({ result }) {
     return (
         <div className='boxBody' >
-            <img className='boxImage' src={result.imgSrc} alt="" />
-            <div className="boxInfo">
-                {`${result?.streetAddress}, ${result?.city}, ${result?.state}`} <br />
-                {`Buying Price: ${commafy(result?.price)}`} <br />
-                {result.rentZestimate && `Estimated Rent Price: ${commafy(result.rentZestimate)}`} <br />
-                {`Bathrooms: ${result?.bathrooms} Bedrooms: ${result?.bedrooms}`}
-            </div>
-            <br /><br />
+            <Link className='link linkBox' to={result.zpid.toString()}>
+                <img className='boxImage' src={result.imgSrc} alt="" />
+                <div className="boxInfo">
+                    {`${result?.streetAddress}, ${result?.city}, ${result?.state}`} <br />
+                    {`Buying Price: ${commafy(result?.price)}`} <br />
+                    {result.rentZestimate && `Estimated Rent Price: ${commafy(result.rentZestimate)}`} <br />
+                    {`Bathrooms: ${result?.bathrooms} Bedrooms: ${result?.bedrooms}`}
+                </div>
+                <br /><br />
+            </Link>
             <div className='boxButtons'>
                 <button id="agentButton" className='boxButton'>Connect to real-estate agent</button>
-                <button id="saveButton" className='boxButton'>Save this property</button>
+                <Heart text={'Save this property'} />
             </div>
         </div >
 

@@ -3,12 +3,12 @@ import './Listings.css'
 import Box from '../Box/Box'
 import data from '../../data.json'
 import Filter from '../Filter/Filter';
-import { Link } from 'react-router-dom';
 function Body() {
     const [data1, setData] = useState([]);
     const [filterData, setFilterData] = useState([]);
     const [sort, setSort] = useState('');
     const [focus, setFocus] = useState(false);
+    const [input, setInput] = useState('');
 
     useEffect(() => {
         setData(data.results.filter((value) => value.bathrooms > 0 && !/google/.test(value.imgSrc)));
@@ -31,6 +31,9 @@ function Body() {
                 break;
         }
     }, [sort])
+    function searchBy() {
+        setFilterData(data1.filter(value => RegExp(input).test(value.city.toLowerCase()) || RegExp(input).test(value.streetAddress.toLowerCase()) || RegExp(input).test(value.country.toLowerCase())))
+    }
     return (
         <div className='body'>
             <div className="bodyHeader">
@@ -41,6 +44,8 @@ function Body() {
                         className={focus ? `searchEnd` : `searchStart`}
                         onFocus={() => setFocus(true)}
                         onBlur={() => setFocus(false)}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={(e) => e.key == 'Enter' && searchBy()}
                     />
                 </div>
                 <div id="bodySortFilter">
@@ -61,9 +66,7 @@ function Body() {
                     {
                         filterData?.map((value, index) => {
                             return (
-                                <Link key={index} className='link boxes' to={`${value.zpid}`}>
-                                    <Box result={value} />
-                                </Link>
+                                <Box key={index} result={value} />
                             )
                         })
                     }

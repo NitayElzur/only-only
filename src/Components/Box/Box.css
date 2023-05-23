@@ -30,6 +30,12 @@
     border-radius: 10px;
 }
 
+.linkBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (max-width: 768px) {
     .boxBody {
         width: 100%;

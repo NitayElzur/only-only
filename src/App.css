@@ -19,6 +19,15 @@
   position: relative;
 }
 
+button {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF9A00;
+}
+
 @media screen and (max-width: 768px) {
   .main {
     width: 0;
