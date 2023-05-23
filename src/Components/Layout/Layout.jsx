@@ -13,6 +13,9 @@ function Layout() {
                     <Link className='link' to={'listings'}>
                         <div className='headerItem'>Listings</div>
                     </Link>
+                    <Link to={'favorites'} className='link'>
+                        <div className="headerItem">Favorites</div>
+                    </Link>
                     <Link className='link' to={'/sign-up'}>
                         <div className='headerItem'>Sign-up</div>
                     </Link>

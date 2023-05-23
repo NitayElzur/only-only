@@ -1,7 +1,8 @@
 import './Box.css'
 import Heart from '../Heart/Heart';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 function commafy(num) {
     const str = num?.toString().split('.');
     if (str[0].length >= 2) {
@@ -12,7 +13,11 @@ function commafy(num) {
     }
     return str.join('.');
 }
-function Box({ result }) {
+function Box({ result, favorites, setFavorites }) {
+    const [like, setLike] = useState('');
+    useEffect(() => {
+        setLike(favorites && favorites.includes(result.zpid))
+    })
     return (
         <div className='boxBody' >
             <Link className='link linkBox' to={result.zpid.toString()}>
@@ -27,7 +32,8 @@ function Box({ result }) {
             </Link>
             <div className='boxButtons'>
                 <button id="agentButton" className='boxButton'>Connect to real-estate agent</button>
-                <Heart text={'Save this property'} />
+                <Heart favorites={favorites} like={like} setLike={setLike} setFavorites={setFavorites} id={result.zpid} text={like ? 'Unsave this property' :'Save this property'} />
+                {console.log(like)}
             </div>
         </div >
 

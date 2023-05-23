@@ -3,7 +3,7 @@ import './Listings.css'
 import Box from '../Box/Box'
 import data from '../../data.json'
 import Filter from '../Filter/Filter';
-function Body() {
+function Body({favorites, setFavorites}) {
     const [data1, setData] = useState([]);
     const [filterData, setFilterData] = useState([]);
     const [sort, setSort] = useState('');
@@ -66,7 +66,7 @@ function Body() {
                     {
                         filterData?.map((value, index) => {
                             return (
-                                <Box key={index} result={value} />
+                                <Box key={index} result={value} favorites={favorites} setFavorites={setFavorites}/>
                             )
                         })
                     }
