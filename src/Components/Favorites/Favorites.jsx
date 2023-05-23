@@ -9,7 +9,14 @@ function Favorites({ favorites, setFavorites }) {
     }, [info, favorites])
     return (
         < div id='favMain'>
-            <div id="favHeader">Your saved estates</div>
+            <div id="favHeader">
+                Your saved estates
+                {data.length > 0 &&
+                    <button className='button boxButton' onClick={() => {
+                        setFavorites([])
+                    }}>Clear all</button>
+                }
+            </div>
             {data.length > 0 ? <div id="favBoxes">
                 {data.map((value, index) => {
                     return <Box key={index} result={value} favorites={favorites} setFavorites={setFavorites} />
