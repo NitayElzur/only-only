@@ -33,7 +33,6 @@ function Box({ result, favorites, setFavorites }) {
             <div className='boxButtons'>
                 <button id="agentButton" className='boxButton'>Connect to real-estate agent</button>
                 <Heart favorites={favorites} like={like} setLike={setLike} setFavorites={setFavorites} id={result.zpid} text={like ? 'Unsave this property' :'Save this property'} />
-                {console.log(like)}
             </div>
         </div >
 
